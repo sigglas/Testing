@@ -1,4 +1,4 @@
-using System.Net;
+ï»¿using System.Net;
 using System.Text;
 
 namespace WebHostInWinForms
@@ -13,7 +13,7 @@ namespace WebHostInWinForms
         {
             Task.Run(() =>
             {
-                //¼ÒÀÀ¤@­ÓWebServer¡AÀ³¸Ó¦³§ó¦n§@ªk¡A¨Ò¦p§Ë¦¨§¹¾ãªºWebAPI¡A³o¸Ì¥u¬O¥Ü·N
+                //æ¨¡æ“¬ä¸€å€‹WebServerï¼Œæ‡‰è©²æœ‰æ›´å¥½ä½œæ³•ï¼Œä¾‹å¦‚å¼„æˆå®Œæ•´çš„WebAPIï¼Œé€™è£¡åªæ˜¯ç¤ºæ„
                 var listener = new HttpListener();
                 listener.Prefixes.Add("http://localhost:8899/");
                 listener.Start();
@@ -38,7 +38,7 @@ namespace WebHostInWinForms
 
         static void HandleRequest(HttpListenerContext context)
         {
-            // ³B²z½Ğ¨D¨Ã¦^¶ÇµêÀÀªº¤º®e
+            // è™•ç†è«‹æ±‚ä¸¦å›å‚³è™›æ“¬çš„å…§å®¹
             string response = LoadFile();
             byte[] buffer = Encoding.UTF8.GetBytes(response);
 
@@ -47,7 +47,7 @@ namespace WebHostInWinForms
             context.Response.OutputStream.Close();
         }
 
-        //Åª¨ú¤@­Ó¨Ó¦Û¹êÅéÀÉ®×¡A©ÎªÌ¼È¦s
+        //è®€å–ä¸€å€‹ä¾†è‡ªå¯¦é«”æª”æ¡ˆï¼Œæˆ–è€…æš«å­˜
         static string? _File;
         static string LoadFile()
         {

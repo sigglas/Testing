@@ -1,4 +1,4 @@
-namespace WebHostInWinForms
+ï»¿namespace WebHostInWinForms
 {
     public partial class Form1 : Form
     {
@@ -6,7 +6,7 @@ namespace WebHostInWinForms
         {
             InitializeComponent();
 
-            //¦b§Aªººô­¶¤¤«ü©wscript src
+            //åœ¨ä½ çš„ç¶²é ä¸­æŒ‡å®šscript src
             webBrowser1.DocumentText = $"<html><script src='http://localhost:8899'></script></html>";
         }
     }
